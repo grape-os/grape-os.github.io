@@ -2,25 +2,54 @@
 <html>
 	<head>
 		<title>GrapeOS</title>
+		<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
 		<style>
 			body {
-				background-color: #212121;
 				font-family: sans-serif;
-				color: white;
+				color: #212121;
+				margin: 0;
+				font-size: 14px;
+				font-family: 'Oxygen', sans-serif;
+				background-color: #d8d8d8;
+				padding: 0px;
+			}
+			h1 {
+			    color: #7308D1;
+			    font-size: 40px;
+			}
+			#topbar h1 {
+			    color: white;
 			}
 			#topbar {
 				text-align: center;
 				margin: 4px;
 				text-shadow: 2px 2px 4px #404040;
 				color: white;
-				background-image: linear-gradient(130deg, #0a97d8, #7308d1);
-				height: 148px;
+				background-image: linear-gradient(130deg, #009dff, #7308d1);
+				height: 200px;
+				margin: 0;
+				
+			}
+			#topbar h1 {
+			    padding-top: 24px;
 			}
 			#navbar {
-				padding: 4px;
-				background-color: #212121;
+				padding: 10px;
+				background-color: rgba(33,33,33,0.5);
 				width: 400px;
-				margin-left: 25%;
+				margin: 0 auto;
+				border-radius: 4px;
+			}
+			#navbar a:link {
+			    background-color: rgba(40, 40, 40, 0.5);
+			    padding: 4px;
+			    transition:.5s;
+			    border-radius: 4px;
+			}
+			#navbar a:hover {
+			    background-color: rgba(100, 100, 100, 0.5);
+			    padding: 4px;
+			    transition:.5s;
 			}
 			a:link {
 				color: white;
@@ -30,8 +59,13 @@
 				color: white;
 				text-decoration: none;
 			}
-			#content {
-				margin: 2px;
+			#content, #downloads, #contact, #status, #why-asm, #about {
+			    /* margin top right bottom left */
+				margin: 20px 40px 20px 40px;
+			}
+			#copyright {
+			    color: #7308D1;
+			    font-size: 14px;
 			}
 		</style>
 	</head>
@@ -41,12 +75,32 @@
 			<p>GrapeOS is a compact, fast, and free operating system</p>
 			<div id="navbar">
 				<a href="#topbar">Home</a>
+				<a href="#status">Status</a>
 				<a href="#downloads">Downloads</a>
+				<a href="#about">About</a>
 				<a href="#contact">Contact</a>
 			</div>
 		</div>
 		<div id="content">
 			<p>GrapeOS is a hobby operating system written from scratch in FASM-style assembly language, for the x86 arch. The whole idea of my operating system is to be lightweight, and have very minimal requirements, while still being suitable for use in the modern times, and have lots of features. </p>
+			<center><h1>Features</h1></center>
+			<ul>
+			    <li>Fast - GrapeOS can boot in less than 4 seconds with 512 mb ram</li>
+			    <li>Lightweight - The current disk image of the operating system is about 4 MB</li>
+			    <li>We are also working on VESA(HD displays) support, and a windowing system with transparency!</li>
+			</ul>
+		</div>
+		<hr>
+		<div id="status">
+		    <center><h1>Status</h1></center>
+		    <p>
+		        We are currently working on out bootloader for GrapeOS, called GrapeLDR, and we are also working on out own filesystem for out bootloader, called GrapeFS, but to build our system, we need to make a disk image maker, so we need to work on that first. 
+		    </p>
+		</div>
+		<hr>
+		<div id="why-asm">
+		    <center><h1>Why Assembly?</h1></center>
+		    <p>We chose assembly because it is small and lightweight, and once you get used to it, it is very easy to program, and develop the operating system. Some people will say that assembly is not portable, but what if i don't want my operating system to be portable. My os is just a hobby os, and I don't want to port it to arm because arm sucks, and x86 rules. </p>
 		</div>
 		<hr>
 		<div id="downloads">
@@ -54,9 +108,17 @@
 			<p>Currently, their is no downloads, but their will soon be some. </p>
 		</div>
 		<hr>
+		<div id="about">
+		    <center><h1>About</h1></center>
+		    <p>Hi. I'm Danny, a 13-year old programmer and operating system developer/hobbyist, and my favorite thing to program is operating systems. I like to play outside, and lately, it is winter, so I have been playing in the snow outside. </p>
+		</div>
+		<hr>
 		<div id="contact">
 			<center><h1>Contact</h1></center>
 			<p>You can contact me at my email, grapeos.contact@gmail.com</p>
+		</div>
+		<div id="copyright">
+		    <center><h4>(C) Copyright 2018 All GrapeOS Contributers</h4></center>
 		</div>
 	</body>
 </html>
